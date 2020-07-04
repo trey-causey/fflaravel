@@ -1,1 +1,14 @@
 //
+$myColor: #ff0000;
+$navy: #000080;
+
+h1.trey {
+    color: $myColor;
+    size: 28pt;
+}
+
+h3.test {
+    color: $navy;
+    size: 22pt;
+}
+
