@@ -1,10 +1,23 @@
 h1.trey {
-  color: #ff0000;
+  color: #e10600;
   size: 28pt;
 }
 
 h3.test {
   color: #000080;
   size: 22pt;
+}
+
+.hrdivider {
+  color: #e10600;
+  size: 1px;
+}
+
+.navbar {
+  background-color: #e10600;
+}
+
+.nav-link {
+  color: #fff;
 }
 

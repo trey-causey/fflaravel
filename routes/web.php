@@ -14,5 +14,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index.index');
+});
+
+Route::get('track', function() {
+   return view('races.index');
+});
+
+/*Route::get('races/circuit', 'CircuitController@getCircuit')->name('races.circuit');*/
+
+Route::get('races/circuit', [
+    'uses' => 'CircuitController@getCircuit',
+    'as' => 'races.circuit'
+    ]);
+
+
+Route::get('child', function() {
+    return view('child');
 });

@@ -1,6 +1,5 @@
-{{--<nav class="navbar navbar-expand navbar-dark bg-primary">--}}
-<nav class="navbar navbar-expand navbar-dark>
-    <a href="#" class="navbar-brand" ><img src="{{ URL::to('/img/main/ff_white1.png') }}" id="mainlogo" alt="main formula fantasy logo" /></a>
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+    <a class="navbar-brand" href="#"><img src="{{ URL::to('/img/main/ff_white1.png') }}" id="mainlogo" alt="main formula fantasy logo" /></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -14,7 +13,7 @@
                 <a class="nav-link" href="#">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('races.circuit') }}">Races</a>
+                <a class="nav-link" href="#">Admin</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-md-0">
@@ -23,7 +22,3 @@
     </div>
 </nav>
 </hr class="hrdivider" >
-
-
-
-
