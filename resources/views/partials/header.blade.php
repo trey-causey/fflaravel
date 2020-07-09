@@ -17,6 +17,9 @@
                 <a class="nav-link" href="{{ route('races.circuit') }}">Races</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="{{ route('drivers.index') }}">Drivers</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="{{ route('admin.administration') }}">Admin</a>
             </li>
         </ul>

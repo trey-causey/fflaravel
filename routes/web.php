@@ -33,6 +33,11 @@ Route::get('admin/aministration', [
     'as' => 'admin.administration'
     ]);
 
+Route::get('driver/index', [
+    'uses' => 'DriverController@showDrivers',
+    'as' => 'drivers.index'
+]);
+
 Route::get('child', function() {
     return view('child');
 });

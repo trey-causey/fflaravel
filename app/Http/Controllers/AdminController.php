@@ -10,7 +10,6 @@ class AdminController extends Controller
 {
     public function addEditDB()
     {
-        $country = Country();
         return view('admin.administration');
     }
 }
