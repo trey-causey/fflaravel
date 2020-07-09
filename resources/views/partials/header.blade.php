@@ -16,6 +16,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('races.circuit') }}">Races</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('admin.administration') }}">Admin</a>
+            </li>
         </ul>
         <form class="form-inline my-2 my-md-0">
             <input class="form-control" type="text" placeholder="Search">

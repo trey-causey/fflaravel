@@ -28,6 +28,10 @@ Route::get('races/circuit', [
     'as' => 'races.circuit'
     ]);
 
+Route::get('admin/aministration', [
+    'uses' => 'AdminController@addEditDB',
+    'as' => 'admin.administration'
+    ]);
 
 Route::get('child', function() {
     return view('child');
