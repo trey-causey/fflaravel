@@ -7,9 +7,11 @@
 @endsection
 @section('content')
     <div class="row">
-        @foreach($drivers as $driver)
-            <h1>{{ $driver->first_name }}</h1>
-        @endforeach
+        <div class="column">
+            @foreach($drivers as $driver)
+                <h5>{{ $driver->first_name }}</h5>
+            @endforeach
+        </div>
     </div>
 @include('drivers.partials.driverFeature')
 @endsection

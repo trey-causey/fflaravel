@@ -9,7 +9,7 @@
     <div class="row">
         <div class="col med 4">
         @foreach($countries as $country)
-        <h3> {{ $country->country }}</h3>
+        <h5> {{ $country->country }}</h5>
         @endforeach
         </div>
     </div>
