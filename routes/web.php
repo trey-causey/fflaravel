@@ -28,7 +28,7 @@ Route::get('races/circuit', [
     'as' => 'races.circuit'
     ]);
 
-Route::get('admin/aministration', [
+Route::get('admin/administration', [
     'uses' => 'AdminController@addEditDB',
     'as' => 'admin.administration'
     ]);

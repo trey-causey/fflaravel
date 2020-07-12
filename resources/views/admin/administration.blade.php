@@ -7,8 +7,11 @@
 @endsection
 @section('content')
     <div class="row">
-        <div class="col med 4">1</div>
-
+        <div class="col med 4">
+        @foreach($countries as $country)
+        <h3> {{ $country->country }}</h3>
+        @endforeach
+        </div>
     </div>
     @include('admin.partials.addCountryForm')
 @endsection
