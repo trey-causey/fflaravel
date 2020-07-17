@@ -14,5 +14,8 @@
         </div>
     </div>
     @include('admin.partials.addCountryForm')
+    @include('admin.partials.addZipcodeForm')
+
 @endsection
+
 
