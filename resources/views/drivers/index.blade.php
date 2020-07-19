@@ -14,4 +14,10 @@
         </div>
     </div>
 @include('drivers.partials.driverFeature')
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+          console.log('changing');
+        };
+    </script>
 @endsection

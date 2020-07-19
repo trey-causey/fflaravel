@@ -2,31 +2,23 @@
 
 namespace App\Models\Location;
 
-
 use Illuminate\Database\Eloquent\Model;
 
 class Zipcode extends Model
 {
-    private $zipCode;
-    
-    public function __construct()
-    {
-
-    }
     public static function storeZipcode()
     {
-try
+        try
         {
             $zipcode = new Zipcode();
             $zipcode->zipcode = request('zipcode');
-            $zipcode->save();
+            if(strlen($zipcode->zipcode)==5 && ctype_digit($zipcode->zipcode)) {
+                $zipcode->save();
+            }
         } catch (\Exception $exception)
         {
             return view ($exception);
         }
-/*        $zipcode = new Zipcode();
-        $zipcode->zipcode = request('zipcode');
-        $zipcode->save();*/
     }
 
     public function getZipcode()

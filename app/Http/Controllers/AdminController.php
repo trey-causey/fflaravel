@@ -48,11 +48,12 @@ class AdminController extends Controller
     {
         $countries = Country::all();
         //declare zip code object
-        $zipCodeObject = new Zipcode();
+        //$zipCodeObject = new Zipcode();
         //accept the zip code input and validate that it is 5 numbers
+            Zipcode::storeZipcode();
 
         //if it is, add to the zip code database
-        $this->saveZip(\request());
+        //$this->saveZip(\request());
         //return the view
         return view('admin.administration',
             ['countries' => $countries]);

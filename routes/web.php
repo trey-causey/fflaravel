@@ -36,7 +36,7 @@ Route::group(['prefix' => 'admin'], function() {
     'as' => 'admin.administration'
 ]);*/
 
-/*Route::post('admin/administration', 'AdminController@addEditDB')->name('zipCheck.post');*/
+/*Route::post("http://fflaravel.test/admin/administration", 'AdminController@addEditDB');*/
 
 Route::get('track', function() {
    return view('races.index');
