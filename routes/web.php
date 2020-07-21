@@ -52,6 +52,11 @@ Route::get('driver/index', [
     'as' => 'drivers.index'
 ]);
 
+Route::get('draft/index', [
+    'uses' => 'DraftController@showAvailableDrivers',
+    'as' => 'draft.index'
+]);
+
 Route::get('ajax',function() {
     return view('message');
 });

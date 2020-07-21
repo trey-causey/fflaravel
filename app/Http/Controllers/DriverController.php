@@ -9,7 +9,7 @@ class DriverController extends Controller
 {
    public function showDrivers()
    {
-       $drivers = Driver::all();
+       $drivers = Driver::all()->sortBy('date_of_birth');
        //var_dump($drivers);
 
        //$drivers = Driver::orderBy('created_at', 'desc')->get();

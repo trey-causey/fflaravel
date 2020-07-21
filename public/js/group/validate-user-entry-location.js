@@ -23,11 +23,10 @@ function checkZip(zipcode) {
             'X-CSRF-Token': '{{ csrf_token() }}',
         },
         success: function(data) {
-            var test = ($('#zipcode').val() % 5);
-            if (($('#zipcode').val().length % 5) !== 0)
+            if ($('#zipcode').val().length !== 5 || isNaN($('#zipcode').val()))
             {
                 window.console.log('you have not entered a valid zip code value');
-                window.console.log($('#zipcode').val().length);
+                window.console.log(isNaN($('#zipcode').val()));
                 swal({
                     title: "Warning",
                     text: "not valid",
@@ -44,7 +43,8 @@ function checkZip(zipcode) {
                     icon: "success"
                 });
             }
-            window.console.log(test);
+
+            window.console.log($('#zipcode').val());
 
         }
     })

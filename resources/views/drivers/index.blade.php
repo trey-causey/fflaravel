@@ -6,14 +6,18 @@
     <p>Test sidebar</p>
 @endsection
 @section('content')
-    <div class="row">
-        <div class="column">
+    <div class="container bg-secondary">
+        <div class="row">
             @foreach($drivers as $driver)
-                <h5>{{ $driver->first_name }}</h5>
+                <div class="col-sm-12 col-md-6 col-lg-3" style="font-family: Calibri">
+                    <h5>{{ $driver->first_name }}</h5>
+                    <h5>{{ $driver->last_name }}</h5>
+                    <h5>{{ $driver->date_of_birth }}</h5>
+                    <img src="{{ $driver->portrait_url }}" height="200px" width="200px"><br>
+                </div>
             @endforeach
         </div>
     </div>
-@include('drivers.partials.driverFeature')
     <script>
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function() {

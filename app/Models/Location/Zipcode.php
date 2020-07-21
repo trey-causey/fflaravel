@@ -21,6 +21,7 @@ class Zipcode extends Model
         }
     }
 
+
     public function getZipcode()
     {
 

@@ -26,7 +26,8 @@ class AdminController extends Controller
     }
     public function saveZip(Request $request)
     {
-        try {
+        try
+        {
             $zipcode = new Zipcode();
             $zipcode->zipcode = request('zipcode');
             $zipcode->save();
