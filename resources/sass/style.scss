@@ -1,4 +1,42 @@
+$perfectRed: #e10600;
+$pureWhite: #fff;
+$navy: #000080;
+
 #mainlogo {
     height: 60px;
     max-width: 100%;
 }
+
+h1.trey {
+    color: $perfectRed;
+    size: 28pt;
+}
+
+h3.test {
+    color: $navy;
+    size: 22pt;
+}
+
+.hrdivider {
+    color: $perfectRed;
+    size: 1px;
+}
+
+.navbar {
+    background-color: $perfectRed;
+}
+
+.nav-link {
+    color: $pureWhite;
+}
+
+.driverPortrait {
+    border-style: outset;
+    border-color: $perfectRed;
+    border-width: thin;
+}
+
+.driverPortrait:hover {
+    border-width: thick;
+}
+
