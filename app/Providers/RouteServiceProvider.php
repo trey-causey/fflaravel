@@ -22,6 +22,8 @@ class RouteServiceProvider extends ServiceProvider
      * @var string
      */
     public const HOME = '/home';
+    //adding 7/24/20 to test re-direct
+    public const DRIVER = '/driver/index';
 
     /**
      * Define your route model bindings, pattern filters, etc.
