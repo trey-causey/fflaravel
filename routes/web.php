@@ -76,3 +76,6 @@ Route::post('ajaxRequest', 'AjaxController@ajaxRequestPost')->name('ajaxRequest.
     'as' => 'admin.administration'
 ]);*/
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

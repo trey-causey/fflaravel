@@ -1,4 +1,5 @@
 $perfectRed: #e10600;
+$deepGray: #222222;
 $pureWhite: #fff;
 $navy: #000080;
 
@@ -42,5 +43,9 @@ h3.test {
 
 .driverContainer h6 {
     font-family: Georgia;
+}
+
+body {
+    background-color: $deepGray;
 }
 
