@@ -15,6 +15,7 @@
     </div>
     @include('admin.partials.addCountryForm')
     @include('admin.partials.addZipcodeForm')
+    @include('admin.partials.addTeamOwnerForm')
 
 @endsection
 
