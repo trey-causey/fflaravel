@@ -22,6 +22,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('admin.administration') }}">Admin</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('constructors.index') }}">Constructors</a>
+            </li>
         </ul>
         <!-- Right Side Of Navbar -->
         <ul class="navbar-nav ml-auto">

@@ -12,14 +12,15 @@ use App\Http\Controllers;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/', function () {
     return view('index.index');
 });
 
-/*Route::group(['prefix' => 'admin'], function() {
-    Route::get('administration', function () {
-       return view ('admin.administration');
-    })->name('admin.administration');*/
+Route::get('constructors/index', [
+    'uses' => 'ConstructorsController@getResults',
+    'as' => 'constructors.index'
+]);
 
 Route::group(['prefix' => 'admin'], function() {
     Route::get('administration', [
@@ -31,12 +32,6 @@ Route::group(['prefix' => 'admin'], function() {
         'as' => 'admin.zipCodePost'
     ])->name('zipCodePost');
 });
-/*Route::get('admin/administration', [
-    'uses' => 'AdminController@addEditDB',
-    'as' => 'admin.administration'
-]);*/
-
-/*Route::post("http://fflaravel.test/admin/administration", 'AdminController@addEditDB');*/
 
 Route::get('track', function() {
    return view('races.index');
@@ -64,9 +59,17 @@ Route::get('ajax',function() {
 Route::post('/getmsg','AjaxController@index');
 
 Route::get('ajaxRequest', 'AjaxController@ajaxRequest');
-//*************************************************************//
 
 Route::post('ajaxRequest', 'AjaxController@ajaxRequestPost')->name('ajaxRequest.post');
+
+Route::get('/home', 'HomeController@index')->name('home');
+Auth::routes();
+
+/*Route::group(['prefix' => 'admin'], function() {
+    Route::get('administration', function () {
+       return view ('admin.administration');
+    })->name('admin.administration');*/
+
 //Route::post('admin/administration', 'AdminController@ajaxRequestPost')->name('zipCheck.post');
 
 /*Route::get('races/circuit', 'CircuitController@getCircuit')->name('races.circuit');*/
@@ -76,6 +79,9 @@ Route::post('ajaxRequest', 'AjaxController@ajaxRequestPost')->name('ajaxRequest.
     'as' => 'admin.administration'
 ]);*/
 
-Auth::routes();
+/*Route::get('admin/administration', [
+    'uses' => 'AdminController@addEditDB',
+    'as' => 'admin.administration'
+]);*/
 
-Route::get('/home', 'HomeController@index')->name('home');
+/*Route::post("http://fflaravel.test/admin/administration", 'AdminController@addEditDB');*/
