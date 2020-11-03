@@ -47,6 +47,11 @@ Route::get('driver/index', [
     'as' => 'drivers.index'
 ]);
 
+/*Route::get('driver/index', [
+    'uses' => 'DriverController@showDriverPortraits',
+    'as' => 'drivers.index'
+]);*/
+
 Route::get('draft/index', [
     'uses' => 'DraftController@showAvailableDrivers',
     'as' => 'draft.index'

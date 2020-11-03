@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Driver;
+use App\Models\Person\Driver;
 use Illuminate\Http\Request;
 
 class DraftController extends Controller

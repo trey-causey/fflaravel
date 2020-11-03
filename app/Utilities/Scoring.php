@@ -1,9 +1,11 @@
 <?php
 
 namespace App\Utilities;
+require 'vendor/autoload.php';
 
 use App\Teamowner;
 use App\Stats;
+use GuzzleHttp\Client;
 
 class Scoring {
 const IT = 2;
@@ -23,6 +25,15 @@ private $driverPosition = [
     public function calculatePoints()
     {
         $to = new Teamowner();
+        //add points based on driver position
+        addNewDriverPoints();
+
+    }
+
+    public function addNewDriverPoints()
+    {
+        $beginningPoints = 100;
+        $client = new Client(['base_url' => 'https://ergast.com/api/f1/current/last/results']);
 
     }
 

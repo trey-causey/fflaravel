@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Driver;
+use App\Models\Person\Driver;
+use App\Models\Person\DriverPortraits;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class DriverController extends Controller
 {
@@ -14,6 +16,20 @@ class DriverController extends Controller
 
        //$drivers = Driver::orderBy('created_at', 'desc')->get();
        return view('drivers.index', ['drivers'=> $drivers]);
+   }
+
+   public function showDriverPortraits()
+   {
+       $drivers = Driver::all()->sortBy('dob');
+       $driverPortraits = DriverPortraits::all();
+       //var_dump($drivers);
+       $join = DB::select('SELECT dp.portraitURL, driverRef,dob FROM driverPortraits dp JOIN drivers d ON dp.driverID = d.driverID');
+       //$drivers = Driver::orderBy('created_at', 'desc')->get();
+       /*       return view('drivers.index', [
+                  'drivers'=> $drivers,
+                   'driverPortraits' => $driverPortraits
+              ]);*/
+       return view('drivers.index', ['join' => $join]);
    }
 
    public function updateDriver()
