@@ -43,7 +43,7 @@ Route::get('races/circuit', [
     ]);
 
 Route::get('driver/index', [
-    'uses' => 'DriverController@showDrivers',
+    'uses' => 'DriverController@showErgastDrivers',
     'as' => 'drivers.index'
 ]);
 

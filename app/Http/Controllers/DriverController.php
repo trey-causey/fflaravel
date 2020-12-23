@@ -9,13 +9,19 @@ use Illuminate\Support\Facades\DB;
 
 class DriverController extends Controller
 {
+    public function showErgastDrivers()
+    {
+        $drivers = Driver::all()->sortBy('dob');
+        return view('drivers.index', ['drivers'=> $drivers]);
+
+    }
    public function showDrivers()
    {
        $drivers = Driver::all()->sortBy('date_of_birth');
        //var_dump($drivers);
 
        //$drivers = Driver::orderBy('created_at', 'desc')->get();
-       return view('drivers.index', ['drivers'=> $drivers]);
+        return view('drivers.index', ['drivers'=> $drivers]);
    }
 
    public function showDriverPortraits()

@@ -15,12 +15,18 @@
                     <h6>{{ "D.O.B.: " . \Carbon\Carbon::parse($dp->dob)->toFormattedDateString() }}</h6>
                 </div>
             @endforeach--}}
-            @foreach($drivers as $driver)
+            {{--@foreach($drivers as $driver)
                 <div class="col-sm-12 col-md-6 col-lg-3" style="font-family: Calibri">
                     <img src="{{ $driver->portrait_url }}" id="driverPortrait" class="driverPortrait" height="175px" width="175px"><br>
                     <h5>{{ $driver->first_name . " " . $driver->last_name }}</h5>
                     <h5>{{ $driver->date_of_birth }}</h5>
                 </div>
+            @endforeach--}}
+
+            @foreach($drivers as $driver)
+                <h4>{{ $driver->forename . " " > $driver->surname }}</h4>
+                <h5>{{ $driver->code }}</h5>
+                <h6>{{ $driver->nationality }}</h6>
             @endforeach
         </div>
     </div>
