@@ -1,6 +1,4 @@
-<?php
-
-namespace App\Models;
+<?php namespace App\Models\Race;
 
 use Illuminate\Database\Eloquent\Model;
 

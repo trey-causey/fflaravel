@@ -17,6 +17,9 @@ Route::get('/', function () {
     return view('index.index');
 });
 
+Route::get('/test', 'TestController@showTestTable');
+
+
 Route::get('constructors/index', [
     'uses' => 'ConstructorsController@getResults',
     'as' => 'constructors.index'
@@ -45,6 +48,11 @@ Route::get('races/circuit', [
 Route::get('driver/index', [
     'uses' => 'DriverController@showErgastDrivers',
     'as' => 'drivers.index'
+]);
+
+Route::get('rosterselect/index', [
+    'uses' => 'RosterSelectController@ShowAvailableDriver',
+    'as' => 'roster.index'
 ]);
 
 /*Route::get('driver/index', [
