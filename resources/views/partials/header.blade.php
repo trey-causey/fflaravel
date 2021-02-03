@@ -11,7 +11,7 @@
                 <a class="nav-link" href="#">Blog<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('draft.index') }}">Draft</a>
+                <a class="nav-link" href="{{ route('roster.index') }}">Draft</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('races.circuit') }}">Races</a>
@@ -24,6 +24,9 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('constructors.index') }}">Constructors</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('scoring.index') }}">Scoring</a>
             </li>
         </ul>
         <!-- Right Side Of Navbar -->

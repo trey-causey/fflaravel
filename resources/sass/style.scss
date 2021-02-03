@@ -35,14 +35,23 @@ h3.test {
     border-style: outset;
     border-color: $perfectRed;
     border-width: thin;
+    height:100px;
+    width:100px;
+    transition: ease-in-out, height, width .75s;
 }
 
 .driverPortrait:hover {
     border-width: thick;
+    height: 175px;
+    width: 175px;
 }
 
 .driverContainer h6 {
-    font-family: Georgia;
+    font-family: Georgia, sans-serif;
+}
+
+.draftContainer h5{
+    font-family: "Script MT Bold", serif;
 }
 
 body {
