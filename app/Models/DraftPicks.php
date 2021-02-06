@@ -34,28 +34,4 @@ class DraftPicks extends Model
 
     }
 
-    public static function ShowPicksByRace($race) {
-        $primaryDraftPicksSQL = DB::select('SELECT dd.code AS "Primary Driver"
-                            FROM draftable_drivers dd
-                            JOIN draftpicks dp
-                            ON dd.driverId = dp.primaryDriverId
-                            WHERE raceId = "1031"');
-        $secondaryDraftPicksSQL = DB::select('SELECT dd.code AS "Secondary Driver"
-                            FROM draftable_drivers dd
-                            JOIN draftpicks dp
-                            ON dd.driverId = dp.secondaryDriverId
-                            WHERE raceId = "1031"');
-        $turboDraftPicksSQL = DB::select('SELECT dd.code AS "Turbo Driver"
-                            FROM draftable_drivers dd
-                            JOIN draftpicks dp
-                            ON dd.driverId = dp.turboDriverId
-                            WHERE raceId = "1031"');
-
-        $draftPicksSQL = [];
-        array_push($draftPicksSQL, $primaryDraftPicksSQL);
-        array_push($draftPicksSQL, $secondaryDraftPicksSQL);
-        array_push($draftPicksSQL, $turboDraftPicksSQL);
-        return $draftPicksSQL;
-    }
-
 }

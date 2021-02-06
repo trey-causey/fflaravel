@@ -57,6 +57,22 @@ Route::get('scoring/index', [
     'uses' => 'ScoringController@ShowPicksTable',
     'as' => 'scoring.index'
 ]);
+Route::post('/scoring/index', function () {
+    //validate
+    //persist
+    App\Models\Test\Test::create(request(['id', 'name']));
+    //redirect
+});
+
+Route::post('/teamManagers/index',[
+    'uses' => 'TeamManagerController@store',
+    'as' => 'teamManagers.index'
+]);
+
+Route::get('teamManagers/index',[
+   'uses' => 'TeamManagerController@ShowManagers',
+    'as' => 'teamManagers.index'
+]);
 
 /*Route::get('driver/index', [
     'uses' => 'DriverController@showDriverPortraits',

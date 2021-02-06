@@ -1,0 +1,5 @@
+    //$testPicks = RosterSelect::showPickOrder();
+    //$draftPicks = DraftPicks::ShowPicksByRace('1031');
+    //$draftPicks = DraftPicks::ShowDraftPicksTableByRace('1031');
+
+    //->with(['testPicks' => $testPicks])

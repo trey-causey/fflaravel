@@ -3,7 +3,7 @@
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 use App\Models\DraftPicks;
-use App\Models\Person\Teamowner;
+use App\Models\Person\TeamManager;
 
 class RosterSelect extends Model
 {

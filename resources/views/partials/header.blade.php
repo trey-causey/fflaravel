@@ -8,7 +8,7 @@
     <div class="collapse navbar-collapse" id="navbarsExample02">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Blog<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#">Current?<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('roster.index') }}">Draft</a>
@@ -27,6 +27,9 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('scoring.index') }}">Scoring</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('teamManagers.index') }}">Team Managers</a>
             </li>
         </ul>
         <!-- Right Side Of Navbar -->

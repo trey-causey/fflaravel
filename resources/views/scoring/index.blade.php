@@ -13,11 +13,9 @@
                     <i class="fa fa-caret-right"></i>
                 </button>
                 <div class="dropdown-content">
-                    <a href="#">1031</a>
-                    <a href="#">1032</a>
-                    <a href="#">1033</a>
-                    <a href="#">1034</a>
-                    <a href="#">1035</a>
+                    @foreach($roundsInSeason as $rounds)
+                        <a href="#{{ $rounds->raceId }}" > {{ $rounds->round }}</a>
+                    @endforeach
                 </div>
             </div>
 
