@@ -11,7 +11,7 @@ class DraftPicks extends Model
     public static function ShowDraftPicksTableByRace($raceId)
     {
         $variable = [$raceId];
-        $draftPicksSQL = DB::select('SELECT tm.handleName AS "handle", d1.code AS "primary", d2.code AS "secondary", d3.code AS "turbo"
+        $draftPicksSQL = DB::select('SELECT tm.handle AS "handle", d1.code AS "primary", d2.code AS "secondary", d3.code AS "turbo"
                                             FROM draftpicks dp
                                             JOIN teammanagers tm ON tm.teamOwnerId = dp.teamOwnerId
                                             JOIN drivers d1 ON d1.driverId = dp.primaryDriverId

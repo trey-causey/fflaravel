@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRacesTable extends Migration
+class CreateConstructorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,21 +13,19 @@ class CreateRacesTable extends Migration
      */
     public function up()
     {
-        Schema::create('races', function (Blueprint $table) {
+        Schema::create('constructors', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->charset = 'utf8';
             $table->collation = 'utf8_general_ci';
 
-            $table->id('raceId');
-            $table->year('year');
-            $table->unsignedInteger('round');
-            $table->unsignedInteger('circuitId');
-            $table->string('name');
-            $table->date('date');
-            $table->time('time')->nullable();
-            $table->string('url')->nullable();
+            $table->increments('constructorId');
+            $table->string('constructorRef')->nullable(false);
+            $table->string('name')->unique();
+            $table->string('nationality');
+            $table->string('url');
             $table->timestamps();
         });
+
     }
 
     /**
@@ -37,6 +35,6 @@ class CreateRacesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('races');
+        Schema::dropIfExists('constructors');
     }
 }

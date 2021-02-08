@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class TeammanagersTableSeeder extends Seeder
+class ConstructorsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +11,8 @@ class TeammanagersTableSeeder extends Seeder
      */
     public function run()
     {
-        $path = public_path('../database/SQL/020721_teammanagers_dump_for_Seeder.sql');
+        //
+        $path = public_path('../database/SQL/020721_constructors_dump_for_Seeder.sql');
         $sql = file_get_contents($path);
         DB::unprepared($sql);
     }

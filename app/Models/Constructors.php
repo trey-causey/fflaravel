@@ -1,6 +1,4 @@
-<?php
-
-namespace App\Models;
+<?php namespace App\Models;
 
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Database\Eloquent\Model;
@@ -8,10 +6,10 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Psr7;
 use GuzzleHttp\Exception\RequestException;
 
-
 class Constructors extends Model
 {
     protected $table = 'constructors';
+    protected $guarded = [];
 
     public function getConstructorsResults()
     {

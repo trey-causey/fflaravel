@@ -5,7 +5,7 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class ScoringTest extends TestCase {
-    use WithFaker, RefreshDatabase;
+    use WithFaker;
 
     /** @test */
     public function it_tests_something() {

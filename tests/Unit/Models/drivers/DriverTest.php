@@ -6,14 +6,15 @@ use PHPUnit\Framework\TestCase;
 
 class DriverTest extends TestCase
 {
-    use RefreshDatabase;
+    //use RefreshDatabase;
 
     function it_shows_drivers()
     {
         //given
 
         //when
-        $this->artisan();
+        //$this->artisan();
+
         //then
 
     }

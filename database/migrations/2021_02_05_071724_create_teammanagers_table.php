@@ -22,7 +22,7 @@ class CreateTeammanagersTable extends Migration
             $table->unsignedInteger('teamOwnerId')->unique();
             $table->string('firstName');
             $table->string('lastName');
-            $table->date('dob');
+            $table->date('dob')->nullable(true);
             $table->string('handle');
             $table->timestamps();
         });
