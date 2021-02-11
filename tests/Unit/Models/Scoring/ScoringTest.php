@@ -6,6 +6,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class ScoringTest extends TestCase {
     use WithFaker;
+    //use RefreshDatabase;
 
     /** @test */
     public function it_tests_something() {

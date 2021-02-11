@@ -21,7 +21,7 @@ class CreateDriversTable extends Migration
             $table->id('driverId');
             $table->string('driverRef')->nullable(false);
             $table->unsignedInteger('number')->nullable(true);
-            $table->string('code')->unique();
+            $table->string('code')->nullable(true);
             $table->string('forename')->nullable(false);
             $table->string('surname')->nullable(false);
             $table->date('dob')->nullable(true);
