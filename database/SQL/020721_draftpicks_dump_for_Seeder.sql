@@ -17,7 +17,7 @@ MySQL - 10.4.13-MariaDB : Database - ergast_2020
 
 /*Data for the table `draftpicks` */
 
-insert  into `draftpicks`(`draftId`,`raceId`,`ownerId`,`primaryDriverId`,`secondaryDriverId`,`turboDriverId`,`constructorId`,`pickOrder`) values 
+insert  into `draftpicks`(`draftId`,`raceId`,`teamOwnerId`,`primaryDriverId`,`secondaryDriverId`,`turboDriverId`,`constructorId`,`pickOrder`) values
 (1,1031,1,830,839,154,9,5),
 (2,1031,2,1,840,826,131,1),
 (3,1031,3,20,832,826,6,6),
