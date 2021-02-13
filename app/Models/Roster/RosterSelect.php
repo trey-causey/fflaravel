@@ -14,7 +14,7 @@ class RosterSelect extends Model
     }
 
     public static function showPickOrder() {
-        $pickOrderSQL = DB::select('SELECT dp.pickOrder, tm.firstName, tm.handleName, tm.teamOwnerId FROM teammanagers tm
+        $pickOrderSQL = DB::select('SELECT dp.pickOrder, tm.firstName, tm.handle, tm.teamOwnerId FROM teammanagers tm
                                 INNER JOIN draftpicks dp
                                 ON tm.teamOwnerId = dp.teamOwnerId
                                 WHERE raceId = "1031"

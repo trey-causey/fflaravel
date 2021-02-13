@@ -19,7 +19,7 @@
                     <tbody>
                     @foreach($testPicks as $item)
                         <tr>
-                            <th scope="row" id="{{ $item->teamOwnerId }}">{{ $item->pickOrder }} |   {{ $item->handleName  }}    |   {{ $item->firstName }}</th>
+                            <th scope="row" id="{{ $item->teamOwnerId }}">{{ $item->pickOrder }} |   {{ $item->handle  }}    |   {{ $item->firstName }}</th>
                             <td class="primaryDriverId" ></td>
                             <td class="secondaryDriverId"></td>
                             <td class="turboDriverId"></td>
@@ -36,7 +36,7 @@
         <div class="row">
             @foreach($drivers as $driver)
                 <div class="col-sm-12 col-md-6 col-lg-3" style="font-family: Calibri">
-                    <img src="{{ $driver->portraitUrl }}" id={{ $driver->code }} class="driverPortrait" onclick="setDriver(this.id)"><br>
+                    <img src="{{ $driver->portraitUrl }}" id="{{ $driver->code }}" class="driverPortrait" onclick="setDriver(this.id)"><br>
                     <h5>{{ $driver->firsName . " " . $driver->surname }}</h5>
                     <h5>{{ $driver->dateOfBirth }}</h5>
                 </div>
